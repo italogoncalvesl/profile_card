@@ -1,0 +1,40 @@
+name: card_portfolio
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  url_launcher: ^6.1.5
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+     - assets/
+
+  fonts:
+   - family: Source_Serif_Pro
+     fonts:
+       - asset: fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf
+   - family: Rubik
+     fonts:
+       - asset: fonts/Rubik/Rubik-VariableFont_wght.ttf
+   - family: Kalam
+     fonts:
+       -  asset: fonts/Kalam/Kalam-Regular.ttf
