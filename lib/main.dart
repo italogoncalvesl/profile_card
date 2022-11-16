@@ -1,3 +1,4 @@
+import 'package:card_portfolio/page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: MyHome(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -83,13 +85,14 @@ class MyHome extends StatelessWidget {
                       padding: const EdgeInsets.all(5.0),
                       child:
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.05,
+                              width: MediaQuery.of(context).size.width * 0.06,
                             ),
                             Image.asset('assets/github.png',
-                              width: 30,
+                              width: 38,
                               fit: BoxFit.fill,),
                             SizedBox(
                               width: MediaQuery.of(context).size.width * 0.07,
@@ -98,11 +101,14 @@ class MyHome extends StatelessWidget {
                                   'GitHub',
                                   style: TextStyle(
                                     fontFamily: 'Rubik',
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w500,
                                     fontSize: 32,
                                     color: Colors.white,
                                   ),
                                 ),
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.05,
+                            ),
                           ],
                         ),
                     ),
@@ -113,7 +119,7 @@ class MyHome extends StatelessWidget {
                 height: 15.0,
               ),
               GestureDetector(
-                onTap: () => _launcherLink('https://github.com/italogoncalvesl'),
+                onTap: () => _launcherLink('https://www.linkedin.com/in/italo-gon%C3%A7alves/'),
                 child: Card(
                   shape: RoundedRectangleBorder(
                     // side: const BorderSide(color: Colors.white70, width: 1,),
@@ -131,10 +137,10 @@ class MyHome extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.05,
+                            width: MediaQuery.of(context).size.width * 0.07,
                           ),
                           Image.asset('assets/linkedin.png',
-                            width: 30,
+                            width: 38,
                             fit: BoxFit.fill,),
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.07,
@@ -143,7 +149,7 @@ class MyHome extends StatelessWidget {
                             'Linkedin',
                             style: TextStyle(
                               fontFamily: 'Rubik',
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w500,
                               fontSize: 32,
                               color: Colors.white,
                             ),
@@ -158,7 +164,10 @@ class MyHome extends StatelessWidget {
                 height: 15.0,
               ),
               GestureDetector(
-                onTap: () => _launcherLink('https://github.com/italogoncalvesl'),
+                onTap: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProjetosPage()));},
                 child: Card(
                   shape: RoundedRectangleBorder(
                     // side: const BorderSide(color: Colors.white70, width: 1,),
@@ -176,10 +185,10 @@ class MyHome extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.04,
+                            width: MediaQuery.of(context).size.width * 0.07,
                           ),
                           Image.asset('assets/flutter.png',
-                            width: 30,
+                            width: 34,
                             fit: BoxFit.fill,),
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.07,
@@ -188,7 +197,6 @@ class MyHome extends StatelessWidget {
                             'Projetos',
                             style: TextStyle(
                               fontFamily: 'Rubik',
-                              fontWeight: FontWeight.w600,
                               fontSize: 32,
                               color: Colors.white,
                             ),
